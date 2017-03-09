@@ -1,5 +1,5 @@
-﻿$IP = "xxx"#cat .\ip
-$currentIP = ".y1xyx1y."#(Get-NetIPAddress -IPAddress 192.168.1.* | select IPAddress).IPAddress
+﻿$IP = cat .\ip
+$currentIP = (Get-NetIPAddress -IPAddress 192.168.1.* | select IPAddress).IPAddress
 if (!$IP.Equals($currentIP)) {
     $currentIP > .\ip
     C:\Users\totran\AppData\Local\GitHub\shell.ps1
